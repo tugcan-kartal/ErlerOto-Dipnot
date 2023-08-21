@@ -5,9 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eskişehir Erler Oto Aksesuar ve Kaporta</title>
     <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css">
+    <script>
+        
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
 
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateSlidePosition();
+        });
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateSlidePosition();
+        });
+
+        function updateSlidePosition() {
+            const slideWidth = slides[currentSlide].clientWidth;
+            const offset = -currentSlide * slideWidth;
+            slides.forEach(slide => {
+                slide.style.transform = `translateX(${offset}px)`;
+            });
+        }
+
+        updateSlidePosition();
+
+    </script>
 </head>
 <body>
     <!-- Topnavbar Part -->
@@ -47,56 +72,19 @@
     </div>
 
     <!-- Hero Section Part -->
-    <div>
-        <div class="slideshow-container">
-            <div class="slide">
-                <img src="static/slide-1.jpg" alt="not found" />
-            </div>
-            <div class="slide">
-                <img src="static/slide-2.jpg" alt="not found" />
-            </div>
-            <div class="slide">
-                <img src="static/slide-4.jpg" alt="not found" />
-            </div>
-            <div class="slide">
-                <img src="static/slide-5.jpg" alt="not found" />
-            </div>
-            <div class="slide">
-                <img src="static/slide-6.jpg" alt="not found" />
-            </div>
-            <div class="slide">
-                <img src="static/slide-7.jpg" alt="not found" />
-            </div>
-            <!-- Diğer slaytlar burada yer alacak -->
+    <div class="slideshow-container">
+        <div class="slide">
+            <img src="https://www.eskisehirotoaksesuar.com/images/slide-1.jpg" alt="not found" />
         </div>
-        
-        <div id="prevBtn" class="text-3xl mdi mdi mdi-menu-left cursor-pointer"></div>
-        <div id="nextBtn" class="text-3xl mdi mdi mdi-menu-right cursor-pointer"></div>
-        
-        <script>
-            const slides = document.querySelectorAll('.slide');
-            let currentSlide = 0;
-
-            document.getElementById('nextBtn').addEventListener('click', () => {
-                currentSlide = (currentSlide + 1) % slides.length;
-                updateSlidePosition();
-            });
-
-            document.getElementById('prevBtn').addEventListener('click', () => {
-                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-                updateSlidePosition();
-            });
-
-            function updateSlidePosition() {
-                const slideWidth = slides[currentSlide].clientWidth;
-                const offset = -currentSlide * slideWidth;
-                slides.forEach(slide => {
-                    slide.style.transform = `translateX(${offset}px)`;
-                });
-            }
-
-            updateSlidePosition();
-        </script>
+        <div class="slide">
+            <img src="https://www.eskisehirotoaksesuar.com/images/slide-2.jpg" alt="not found" />
+        </div>
+        <!-- Diğer slaytlar burada yer alacak -->
     </div>
+    
+    <button id="prevBtn">◄</button>
+    <button id="nextBtn">►</button>
+    
+    
 </body>
 </html>
