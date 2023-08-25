@@ -47,32 +47,34 @@
     </div>
 
     <!-- Hero Section Part -->
-    <div>
-        <div class="flex w-full overflow-x:hidden">
+    <div class="bg-gray-50 h-[77vh]">
+        <div class="flex w-full overflow-x:hidden relative">
             <div class="slide min-w-full">
-                <img src="static/slide-1.jpg" alt="not found" />
+                <img class="w-full h-[60vh]" src="static/slide-1.jpg" alt="not found" />
             </div>
             <div class="slide min-w-full">
-                <img src="static/slide-2.jpg" alt="not found" />
+                <img class="w-full h-[60vh]" src="static/slide-2.jpg" alt="not found" />
             </div>
             <div class="slide min-w-full">
-                <img src="static/slide-4.jpg" alt="not found" />
+                <img class="w-full h-[60vh]" src="static/slide-4.jpg" alt="not found" />
             </div>
             <div class="slide min-w-full">
-                <img src="static/slide-5.jpg" alt="not found" />
+                <img class="w-full h-[60vh]" src="static/slide-5.jpg" alt="not found" />
             </div>
             <div class="slide min-w-full">
-                <img src="static/slide-6.jpg" alt="not found" />
+                <img class="w-full h-[60vh]" src="static/slide-6.jpg" alt="not found" />
             </div>
             <div class="slide min-w-full">
-                <img src="static/slide-7.jpg" alt="not found" />
+                <img class="w-full h-[60vh]" src="static/slide-7.jpg" alt="not found" />
             </div>
             <!-- Diğer slaytlar burada yer alacak -->
         </div>
         
-        <div id="prevBtn" class="text-3xl mdi mdi mdi-menu-left cursor-pointer"></div>
-        <div id="nextBtn" class="text-3xl mdi mdi mdi-menu-right cursor-pointer"></div>
+        <div id="prevBtn" class="mdi mdi mdi-menu-left cursor-pointer absolute top-[50vh] left-[1vw] text-white text-[5rem]"></div>
+        <div id="nextBtn" class="mdi mdi mdi-menu-right cursor-pointer absolute top-[50vh] right-[1vw] text-white text-[5rem]"></div>
         
+        <div class="text-xl text-gray-600 flex justify-center mt-[5vh]">Erler Oto</div>
+
         <script>
             const slides = document.querySelectorAll('.slide');
             let currentSlide = 0;
@@ -98,5 +100,7 @@
             updateSlidePosition();
         </script>
     </div>
+
+
 </body>
 </html>
