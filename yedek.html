@@ -5,36 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eskişehir Erler Oto Aksesuar ve Kaporta</title>
     <link rel="stylesheet" href="index.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css">
-    <script>
-        
-        const slides = document.querySelectorAll('.slide');
-        let currentSlide = 0;
+    <script src="https://cdn.tailwindcss.com"></script>
 
-        document.getElementById('nextBtn').addEventListener('click', () => {
-            currentSlide = (currentSlide + 1) % slides.length;
-            updateSlidePosition();
-        });
-
-        document.getElementById('prevBtn').addEventListener('click', () => {
-            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-            updateSlidePosition();
-        });
-
-        function updateSlidePosition() {
-            const slideWidth = slides[currentSlide].clientWidth;
-            const offset = -currentSlide * slideWidth;
-            slides.forEach(slide => {
-                slide.style.transform = `translateX(${offset}px)`;
-            });
-        }
-
-        updateSlidePosition();
-
-    </script>
 </head>
-<body>
+<body class="overflow-x-hidden">
     <!-- Topnavbar Part -->
     <div class="bg-gray-800 py-[2vh] text-white">
         <div class="flex justify-between mx-[2vw]">
@@ -58,33 +33,140 @@
             </div>
 
             <div>
-                <div class="flex gap-x-[2vw] font-semibold text-gray-500">
-                    <div class="hover:text-gray-700 duration-300 transition-all cursor-pointer">Anasayfa</div>
-                    <div class="hover:text-gray-700 duration-300 transition-all cursor-pointer">Hakkımızda</div>
-                    <div class="hover:text-gray-700 duration-300 transition-all cursor-pointer">Ürünler</div>
-                    <div class="hover:text-gray-700 duration-300 transition-all cursor-pointer">Hizmetler</div>
-                    <div class="hover:text-gray-700 duration-300 transition-all cursor-pointer">Markalar</div>
-                    <div class="hover:text-gray-700 duration-300 transition-all cursor-pointer">Galeri</div>
-                    <div class="hover:text-gray-700 duration-300 transition-all cursor-pointer">İletişim</div>
+                <div class="flex gap-x-[2vw] font-semibold">
+                    <div class="hover:text-gray-900 duration-300 transition-all cursor-pointer">Anasayfa</div>
+                    <div class="hover:text-gray-900 duration-300 transition-all cursor-pointer">Hakkımızda</div>
+                    <div class="hover:text-gray-900 duration-300 transition-all cursor-pointer">Ürünler</div>
+                    <div class="hover:text-gray-900 duration-300 transition-all cursor-pointer">Hizmetler</div>
+                    <div class="hover:text-gray-900 duration-300 transition-all cursor-pointer">Markalar</div>
+                    <div class="hover:text-gray-900 duration-300 transition-all cursor-pointer">Galeri</div>
+                    <div class="hover:text-gray-900 duration-300 transition-all cursor-pointer">İletişim</div>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Hero Section Part -->
-    <div class="slideshow-container">
-        <div class="slide">
-            <img src="https://www.eskisehirotoaksesuar.com/images/slide-1.jpg" alt="not found" />
+    <div class="bg-gray-50 h-[80vh]">
+        <div class="flex w-full overflow-x:hidden relative">
+            <div class="slide min-w-full">
+                <img class="w-[75vw] h-[65vh] object-contain mx-auto py-[5vh]" src="static/slide-1.jpg" alt="not found" />
+            </div>
+            <div class="slide min-w-full">
+                <img class="w-[75vw] h-[65vh] object-contain mx-auto py-[5vh]" src="static/slide-2.jpg" alt="not found" />
+            </div>
+            <div class="slide min-w-full">
+                <img class="w-[75vw] h-[65vh] object-contain mx-auto py-[5vh]" src="static/slide-4.jpg" alt="not found" />
+            </div>
+            <div class="slide min-w-full">
+                <img class="w-[75vw] h-[65vh] object-contain mx-auto py-[5vh]" src="static/slide-5.jpg" alt="not found" />
+            </div>
+            <div class="slide min-w-full">
+                <img class="w-[75vw] h-[65vh] object-contain mx-auto py-[5vh]" src="static/slide-6.jpg" alt="not found" />
+            </div>
+            <div class="slide min-w-full">
+                <img class="w-[75vw] h-[65vh] object-contain mx-auto py-[5vh]" src="static/slide-7.jpg" alt="not found" />
+            </div>
         </div>
-        <div class="slide">
-            <img src="https://www.eskisehirotoaksesuar.com/images/slide-2.jpg" alt="not found" />
-        </div>
-        <!-- Diğer slaytlar burada yer alacak -->
+        
+        <div id="prevBtn" class="mdi mdi mdi-menu-left cursor-pointer absolute top-[50vh] left-[5vw] text-black text-[5rem]"></div>
+        <div id="nextBtn" class="mdi mdi mdi-menu-right cursor-pointer absolute top-[50vh] right-[5vw] text-black text-[5rem]"></div>
+        
+        <div class="text-xl text-black flex justify-center mt-[5vh]">Erler Oto</div>
+
+        <script>
+            const slides = document.querySelectorAll('.slide');
+            let currentSlide = 0;
+
+            document.getElementById('nextBtn').addEventListener('click', () => {
+                currentSlide = (currentSlide + 1) % slides.length;
+                updateSlidePosition();
+            });
+
+            document.getElementById('prevBtn').addEventListener('click', () => {
+                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                updateSlidePosition();
+            });
+
+            function updateSlidePosition() {
+                const slideWidth = slides[currentSlide].clientWidth;
+                const offset = -currentSlide * slideWidth;
+                slides.forEach(slide => {
+                    slide.style.transform = `translateX(${offset}px)`;
+                });
+            }
+
+            updateSlidePosition();
+        </script>
     </div>
-    
-    <button id="prevBtn">◄</button>
-    <button id="nextBtn">►</button>
-    
-    
+
+    <!-- About Part -->
+    <div class="">
+        <div class="my-[10vh] w-full flex justify-center gap-x-[5vw]">
+            <div class="w-[40vw] flex items-center">
+                <img class="h-[70vh] object-fit rounded-full" src="static/slide-1.jpg" alt="not found" />
+            </div>
+
+            <div class="w-[40vw] flex flex-col gap-y-[5vh] justify-center">
+
+                <div class="font-semibold">
+                    Kurumsal
+                </div>
+
+                <div class="text-2xl font-extrabold">
+                    Erler Oto
+                </div>
+
+                <div>
+                    <div>
+                        Kuruluşumuz; 1965 yıllarında babamız EROL ÇAL eski otogar bölgesinde ufak bir otobüs atölyesinde çalışmaya başlamıştır. 
+                        İlerleyen zaman içerisinde çıraklık dönemini geçerek kalfa olarak devam etmiştir.
+                    </div>
+                    <br />
+                    <div>
+                        Askerlik döneminden sonra 1979 yılında ÖZENİR KAROSER, adında kendi işyeri olan küçük sanayi çarşısında atölyesini kurmuştur. 
+                        İlk etaplarda kamyon ve traktör v.b işlerle değişik dallarda bulunmuştur. 
+                        Kendisini yenileyerek otobüs işletmeciliğinde gözde olan; 0 302 MERCEDES marka olan otobüslerin çarpma kapılardan havalı kapılara çevirmesi ve sıfırdan araçların toplanması ve iç döşemelerin yapılması sonucunda ilerlemiş olup marka haline gelmiştir.
+                    </div>
+                    <br />
+                    <div>
+                        1996 yılında büyük oğlu ERKAN ÇAL düz lise öğretim sonunda devam ettirmek üzere tamamen karasörcülüğe başlamıştır. 
+                        1997 yılında ERLER OTO KAPORTA SAN. TİC. LTD ŞTİ. olarak şirketleşmiştir. Yenilik çerçevesinde devam etmektedir.
+                        Küçük oğlu ERHAN ÇAL; teknik lise uçak model  ve belirli sertifikalarla işletmenin parçası olarak devam etmektedir. 
+                        2008 yılında yedek parça ve aksesuar küçük halde satışlar yapmıştır. 2023 yılında TORNACILAR VE OTO TAMİRCİLER SİTESİNDE bulunan yeni işyerimizde yedek parça ve iç-dış aksesuar dizayn ederek  siz değerli müşterilerimize hizmet vermekteyiz.
+                    </div>
+                    <br />
+                </div>
+
+                <button class="bg-gray-800 w-[10vw] h-[5vh] rounded-lg text-white hover:bg-gray-700">Detaylı Bilgi</button>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Products Part -->
+    <div class="bg-gray-50 flex flex-col gap-y-[5vh]">
+
+        <div class="flex justify-center gap-x-[2vw] relative">
+            <div>
+                <div class="text-2xl z-10 absolute top-[15vh] left-[10vw] text-white">Bagaj / Portbagaj</div>
+                <img class="w-[20vw] h-[20vh]" src="./static/bagaj-products.jpg" alt="not found"/>
+            </div>
+            <div>
+                <div class="text-2xl z-10 absolute top-[15vh] left-[32vw] text-white">Led / Xenon Far</div>
+                <img class="w-[20vw] h-[20vh]" src="./static/bagaj-products.jpg" alt="not found"/>
+            </div>
+            <div>
+                <div class="text-2xl z-10 absolute top-[15vh] right-[32vw] text-white">Etiket / Arma</div>
+                <img class="w-[20vw] h-[20vh]" src="./static/bagaj-products.jpg" alt="not found"/>
+            </div>
+            <div>
+                <div class="text-2xl z-10 absolute top-[15vh] right-[10vw] text-white">Paspas</div>
+                <img class="w-[20vw] h-[20vh]" src="./static/bagaj-products.jpg" alt="not found"/>
+            </div>
+        </div>
+       
+    </div>
+
 </body>
 </html>
