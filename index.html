@@ -53,7 +53,7 @@
 
     <!-- Hero Section Part -->
     <div class="bg-gray-50 md:h-[80vh] h-[45vh]">
-        <div class="flex w-full overflow-x:hidden relative">
+        <div class="flex w-full md:overflow-x:hidden overflow-x-hidden relative">
             <div class="slide min-w-full">
                 <img class="md:w-[75vw] md:h-[65vh] object-contain mx-auto py-[5vh]" src="static/slide-1.jpg" alt="not found" />
             </div>
@@ -255,7 +255,7 @@
 
     <!-- Footer Part -->
     <div>
-        <div class="bg-black flex justify-between px-[5vw] py-[5vh] text-white">
+        <div class="bg-black flex md:flex-row flex-col md:justify-between justify-center items-center px-[5vw] py-[5vh] text-white gap-y-[3vh]">
 
             <div class="my-auto">
                 <img class="h-[10vh]" src="static/logo.png" alt="logo"/>
@@ -263,7 +263,7 @@
             
             <div class="flex flex-col gap-y-[2vh]">
 
-                <div class="flex gap-x-[2vw] justify-end">
+                <div class="flex gap-x-[2vw] md:justify-end justify-center">
                     <div class="text-4xl text-blue-500">
                         <span class="mdi mdi-facebook"></span>
                     </div>
@@ -275,14 +275,21 @@
                     </div>
                 </div>
 
-                <div class="flex justify-end gap-x-[1vw]">
-                    <div class="border border-gray-600 p-2 hover:cursor-pointer hover:opacity-75 hover:scale-90 duration-300">Anasayfa</div>
-                    <div class="border border-gray-600 p-2 hover:cursor-pointer hover:opacity-75 hover:scale-90 duration-300">Hakkımızda</div>
-                    <div class="border border-gray-600 p-2 hover:cursor-pointer hover:opacity-75 hover:scale-90 duration-300">Ürünler</div>
-                    <div class="border border-gray-600 p-2 hover:cursor-pointer hover:opacity-75 hover:scale-90 duration-300">Hizmetler</div>
-                    <div class="border border-gray-600 p-2 hover:cursor-pointer hover:opacity-75 hover:scale-90 duration-300">Markalar</div>
-                    <div class="border border-gray-600 p-2 hover:cursor-pointer hover:opacity-75 hover:scale-90 duration-300">Galeri</div>
-                    <div class="border border-gray-600 p-2 hover:cursor-pointer hover:opacity-75 hover:scale-90 duration-300">İletişim</div>
+                <div class="flex md:flex-row flex-col md:justify-end justify-center gap-y-[2vh]">
+
+                    <div class="flex gap-x-[1vw]">
+                        <div class="border border-gray-600 p-2 hover:cursor-pointer hover:opacity-75 hover:scale-90 duration-300">Anasayfa</div>
+                        <div class="border border-gray-600 p-2 hover:cursor-pointer hover:opacity-75 hover:scale-90 duration-300">Hakkımızda</div>
+                        <div class="border border-gray-600 p-2 hover:cursor-pointer hover:opacity-75 hover:scale-90 duration-300">Ürünler</div>
+                        <div class="border border-gray-600 p-2 hover:cursor-pointer hover:opacity-75 hover:scale-90 duration-300">Hizmetler</div>
+                    </div>
+                    
+                    <div class="flex justify-center gap-x-[1vw]">
+                        <div class="border border-gray-600 p-2 hover:cursor-pointer hover:opacity-75 hover:scale-90 duration-300">Markalar</div>
+                        <div class="border border-gray-600 p-2 hover:cursor-pointer hover:opacity-75 hover:scale-90 duration-300">Galeri</div>
+                        <div class="border border-gray-600 p-2 hover:cursor-pointer hover:opacity-75 hover:scale-90 duration-300">İletişim</div>
+                    </div>
+
                 </div>
 
                 <div class="flex justify-end gap-x-[2vw]">
