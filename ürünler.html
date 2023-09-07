@@ -52,106 +52,6 @@
         </div>
     </div>
 
-    <!-- Hero Section Part -->
-    <div class="bg-gray-50 md:h-[80vh] h-[45vh]">
-        <div class="flex w-full md:overflow-x:hidden overflow-x-hidden relative">
-            <div class="slide min-w-full">
-                <img class="md:w-[75vw] md:h-[65vh] object-contain mx-auto py-[5vh]" src="static/slide-1.jpg" alt="not found" />
-            </div>
-            <div class="slide min-w-full">
-                <img class="md:w-[75vw] md:h-[65vh] object-contain mx-auto py-[5vh]" src="static/slide-2.jpg" alt="not found" />
-            </div>
-            <div class="slide min-w-full">
-                <img class="md:w-[75vw] md:h-[65vh] object-contain mx-auto py-[5vh]" src="static/slide-4.jpg" alt="not found" />
-            </div>
-            <div class="slide min-w-full">
-                <img class="md:w-[75vw] md:h-[65vh] object-contain mx-auto py-[5vh]" src="static/slide-5.jpg" alt="not found" />
-            </div>
-            <div class="slide min-w-full">
-                <img class="md:w-[75vw] md:h-[65vh] object-contain mx-auto py-[5vh]" src="static/slide-6.jpg" alt="not found" />
-            </div>
-            <div class="slide min-w-full">
-                <img class="md:w-[75vw] md:h-[65vh] object-contain mx-auto py-[5vh]" src="static/slide-7.jpg" alt="not found" />
-            </div>
-        </div>
-        
-        <div id="prevBtn" class="mdi mdi mdi-menu-left cursor-pointer absolute top-[50vh] left-[5vw] text-black text-[5rem]"></div>
-        <div id="nextBtn" class="mdi mdi mdi-menu-right cursor-pointer absolute top-[50vh] right-[5vw] text-black text-[5rem]"></div>
-        
-        <div class="text-xl text-black flex justify-center md:mt-[5vh]">
-            Erler Oto
-        </div>
-
-        <script>
-            const slides = document.querySelectorAll('.slide');
-            let currentSlide = 0;
-
-            document.getElementById('nextBtn').addEventListener('click', () => {
-                currentSlide = (currentSlide + 1) % slides.length;
-                updateSlidePosition();
-            });
-
-            document.getElementById('prevBtn').addEventListener('click', () => {
-                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-                updateSlidePosition();
-            });
-
-            function updateSlidePosition() {
-                const slideWidth = slides[currentSlide].clientWidth;
-                const offset = -currentSlide * slideWidth;
-                slides.forEach(slide => {
-                    slide.style.transform = `translateX(${offset}px)`;
-                });
-            }
-
-            updateSlidePosition();
-        </script>
-    </div>
-
-    <!-- About Part -->
-    <div class="">
-        <div class="my-[10vh] px-[10vw] w-full flex md:flex-row flex-col justify-center items-center gap-x-[5vw] gap-y-[2vh]">
-            <div class="md:w-[40vw] flex items-center">
-                <img class="md:h-[70vh] object-fit rounded-full" src="static/slide-1.jpg" alt="not found" />
-            </div>
-
-            <div class="md:w-[40vw] flex flex-col gap-y-[5vh] justify-center">
-
-                <div class="font-semibold">
-                    Kurumsal
-                </div>
-
-                <div class="text-2xl font-extrabold">
-                    Erler Oto
-                </div>
-
-                <div>
-                    <div>
-                        Kuruluşumuz; 1965 yıllarında babamız EROL ÇAL eski otogar bölgesinde ufak bir otobüs atölyesinde çalışmaya başlamıştır. 
-                        İlerleyen zaman içerisinde çıraklık dönemini geçerek kalfa olarak devam etmiştir.
-                    </div>
-                    <br />
-                    <div>
-                        Askerlik döneminden sonra 1979 yılında ÖZENİR KAROSER, adında kendi işyeri olan küçük sanayi çarşısında atölyesini kurmuştur. 
-                        İlk etaplarda kamyon ve traktör v.b işlerle değişik dallarda bulunmuştur. 
-                        Kendisini yenileyerek otobüs işletmeciliğinde gözde olan; 0 302 MERCEDES marka olan otobüslerin çarpma kapılardan havalı kapılara çevirmesi ve sıfırdan araçların toplanması ve iç döşemelerin yapılması sonucunda ilerlemiş olup marka haline gelmiştir.
-                    </div>
-                    <br />
-                    <div>
-                        1996 yılında büyük oğlu ERKAN ÇAL düz lise öğretim sonunda devam ettirmek üzere tamamen karasörcülüğe başlamıştır. 
-                        1997 yılında ERLER OTO KAPORTA SAN. TİC. LTD ŞTİ. olarak şirketleşmiştir. Yenilik çerçevesinde devam etmektedir.
-                        Küçük oğlu ERHAN ÇAL; teknik lise uçak model  ve belirli sertifikalarla işletmenin parçası olarak devam etmektedir. 
-                        2008 yılında yedek parça ve aksesuar küçük halde satışlar yapmıştır. 2023 yılında TORNACILAR VE OTO TAMİRCİLER SİTESİNDE bulunan yeni işyerimizde yedek parça ve iç-dış aksesuar dizayn ederek  siz değerli müşterilerimize hizmet vermekteyiz.
-                    </div>
-                    <br />
-                </div>
-
-                <button class="bg-gray-800 md:w-[10vw] w-[30vw] h-[5vh] rounded-lg text-white hover:bg-gray-700">Detaylı Bilgi</button>
-
-            </div>
-        </div>
-    </div>
-
     <!-- Products Part -->
     <div class="bg-gray-50 py-[5vh] flex flex-col">
 
@@ -254,80 +154,35 @@
         </div>
     </div>
 
-    <!-- Brands Part -->
-    <div class="bg-gray-50 py-[5vh] flex flex-col">
-
-        <div class="mx-auto text-2xl font-bold text-gray-800 mb-[1vh]">Markalar</div>
-        <hr class="w-[10vw] mx-auto border-2 border-gray-800 mb-[5vh]" />
-
-        <div class="flex flex-col gap-y-[5vh]">
-
-            <div class="flex justify-center gap-x-[2vw]">
-                <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
-                    <img class="md:w-[30vw] w-[30vw] md:h-[30vh] h-[20vh]" src="./static/carpi-markalar.png" alt="not found"/>
-                </div>
-                <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
-                    <img class="md:w-[30vw] w-[30vw] md:h-[30vh] h-[20vh]" src="./static/panda-markalar.jpg" alt="not found"/>
-                </div>
-                <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
-                    <img class="md:w-[30vw] w-[30vw] md:h-[30vh] h-[20vh]" src="./static/nıken-markalar.png" alt="not found"/>
-                </div>               
-            </div>
-        
-            <div class="flex justify-center gap-x-[2vw]">
-                <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
-                    <img class="md:w-[30vw] w-[30vw] md:h-[30vh] h-[20vh]" src="./static/omsalıne-markalar.png" alt="not found"/>
-                </div>
-                <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
-                    <img class="md:w-[30vw] w-[30vw] md:h-[30vh] h-[20vh]" src="./static/dizaynmls-markalar.png" alt="not found"/>
-                </div>
-                <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
-                    <img class="md:w-[30vw] w-[30vw] md:h-[30vh] h-[20vh]" src="./static/naviin-markalar.png" alt="not found"/>
-                </div>
-                
-            </div>
-
-            <div class="flex justify-center gap-x-[2vw]">
-                <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
-                    <img class="md:w-[30vw] w-[30vw] md:h-[30vh] h-[20vh]" src="./static/bossautodeluxe-markalar.jpg" alt="not found"/>
-                </div>
-                <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
-                    <img class="md:w-[30vw] w-[30vw] md:h-[30vh] h-[20vh]" src="./static/carub-markalar.jpg" alt="not found"/>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
     <!-- Footer Part -->
     <div>
         <div class="bg-black flex md:flex-row flex-col md:justify-between justify-center items-center px-[5vw] py-[5vh] text-white gap-y-[3vh]">
 
-            <a href="index.html" class="my-auto">
+            <div class="my-auto">
                 <img class="h-[10vh]" src="static/logo.png" alt="logo"/>
-            </a>
+            </div>
             
             <div class="flex flex-col gap-y-[2vh]">
 
-                <div class="flex md:gap-x-[2vw] gap-x-[10vw] md:justify-end justify-center">
-                    <a class="hover:opacity-75 hover:cursor-pointer">
-                        <img class="md:w-[2vw] w-[10vw]" src="static/facebook-footer.png" alt="not found" />
-                    </a>
-                    <a class="hover:opacity-75 hover:cursor-pointer">
-                        <img class="md:w-[2vw] w-[10vw]" src="static/instagram-footer.png" alt="not found" />
-                    </a>
-                    <a class="hover:opacity-75 hover:cursor-pointer">
-                        <img class="md:w-[2vw] w-[10vw]" src="static/youtube-footer.png" alt="not found" />
-                    </a>
+                <div class="flex gap-x-[2vw] md:justify-end justify-center">
+                    <div class="text-4xl text-blue-500">
+                        <span class="mdi mdi-facebook"></span>
+                    </div>
+                    <div class="text-4xl text-red-600">
+                        <span class="mdi mdi-instagram"></span>
+                    </div>
+                    <div class="text-4xl text-red-600">
+                        <span class="mdi mdi-youtube"></span>
+                    </div>
                 </div>
 
                 <div class="flex md:flex-row flex-col md:justify-end justify-center gap-y-[2vh]">
 
                     <div class="flex gap-x-[1vw]">
-                        <a href="index.html" class="border border-gray-600 p-2 hover:cursor-pointer hover:opacity-75 hover:scale-90 duration-300">Anasayfa</a>
-                        <a href="hakkimizda.html" class="border border-gray-600 p-2 hover:cursor-pointer hover:opacity-75 hover:scale-90 duration-300">Hakkımızda</a>
-                        <a href="ürünler.html" class="border border-gray-600 p-2 hover:cursor-pointer hover:opacity-75 hover:scale-90 duration-300">Ürünler</a>
-                        <a class="border border-gray-600 p-2 hover:cursor-pointer hover:opacity-75 hover:scale-90 duration-300 mr-[1vw]">Hizmetler</a>
+                        <div class="border border-gray-600 p-2 hover:cursor-pointer hover:opacity-75 hover:scale-90 duration-300">Anasayfa</div>
+                        <div class="border border-gray-600 p-2 hover:cursor-pointer hover:opacity-75 hover:scale-90 duration-300">Hakkımızda</div>
+                        <div class="border border-gray-600 p-2 hover:cursor-pointer hover:opacity-75 hover:scale-90 duration-300">Ürünler</div>
+                        <div class="border border-gray-600 p-2 hover:cursor-pointer hover:opacity-75 hover:scale-90 duration-300 mr-[1vw]">Hizmetler</div>
                     </div>
                     
                     <div class="flex justify-center gap-x-[1vw]">
