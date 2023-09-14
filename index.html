@@ -7,6 +7,25 @@
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* CSS stilleri burada */
+        .product-info {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: black;
+            color: white;
+            font-size: 1.3rem;
+            display: none;
+            border-radius: 5px;
+        }
+
+        .relative:hover .product-info {
+            display: block;
+            z-index: 10;
+        }
+    </style>
 </head>
 
 <body class="overflow-x-hidden">
@@ -56,22 +75,22 @@
     <div class="bg-gray-50 md:h-[80vh] h-[45vh]">
         <div class="flex w-full md:overflow-x:hidden overflow-x-hidden relative">
             <div class="slide min-w-full">
-                <img class="md:w-[100vw] md:h-[70vh] object-fit mx-auto py-[5vh]" src="static/slide-1.jpg" alt="not found" />
+                <img class="md:w-[100vw] md:h-[70vh] object-cover mx-auto py-[5vh]" src="static/slide-1.jpg" alt="not found" />
             </div>
             <div class="slide min-w-full">
-                <img class="md:w-[100vw] md:h-[70vh] object-fit mx-auto py-[5vh]" src="static/slide-2.jpg" alt="not found" />
+                <img class="md:w-[100vw] md:h-[70vh] object-cover mx-auto py-[5vh]" src="static/slide-2.jpg" alt="not found" />
             </div>
             <div class="slide min-w-full">
-                <img class="md:w-[100vw] md:h-[70vh] object-fit mx-auto py-[5vh]" src="static/slide-4.jpg" alt="not found" />
+                <img class="md:w-[100vw] md:h-[70vh] object-cover mx-auto py-[5vh]" src="static/slide-4.jpg" alt="not found" />
             </div>
             <div class="slide min-w-full">
-                <img class="md:w-[100vw] md:h-[70vh] object-fit mx-auto py-[5vh]" src="static/slide-5.jpg" alt="not found" />
+                <img class="md:w-[100vw] md:h-[70vh] object-cover mx-auto py-[5vh]" src="static/slide-5.jpg" alt="not found" />
             </div>
             <div class="slide min-w-full">
-                <img class="md:w-[100vw] md:h-[70vh] object-fit mx-auto py-[5vh]" src="static/slide-6.jpg" alt="not found" />
+                <img class="md:w-[100vw] md:h-[70vh] object-cover mx-auto py-[5vh]" src="static/slide-6.jpg" alt="not found" />
             </div>
             <div class="slide min-w-full">
-                <img class="md:w-[100vw] md:h-[70vh] object-fit mx-auto py-[5vh]" src="static/slide-7.jpg" alt="not found" />
+                <img class="md:w-[100vw] md:h-[70vh] object-cover mx-auto py-[5vh]" src="static/slide-7.jpg" alt="not found" />
             </div>
         </div>
         
@@ -176,186 +195,202 @@
             <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
                 <div class="md:text-2xl z-10 absolute top-[6vw] left-[5vw] text-white font-semibold">Bagaj / Portbagaj</div>
                 <img class="md:w-[30vw] w-full md:h-[30vh] h-[20vh] blur-[1px]" src="./static/bagaj-products.jpg" alt="not found"/>
+                <div class="product-info">Bu ürün, bagaj veya portbagajla ilgili aksesuarları içerir.</div>
             </div>
     
             <!-- Ürün 2 -->
             <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
                 <div class="md:text-2xl z-10 absolute top-[6vw] left-[7vw] text-white font-semibold">Led / Xenon Far</div>
                 <img class="md:w-[30vw] w-full md:h-[30vh] h-[20vh] blur-[1px]" src="./static/led-products.jpg" alt="not found"/>
+                <div class="product-info">Bu ürün, LED veya Xenon farlarla ilgili aksesuarları içerir.</div>
             </div>
     
             <!-- Ürün 3 -->
             <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
                 <div class="md:text-2xl z-10 absolute top-[6vw] left-[7vw] text-white font-semibold">Etiket / Arma</div>
                 <img class="md:w-[30vw] w-full md:h-[30vh] h-[20vh] blur-[1px]" src="./static/etiket-products.jpg" alt="not found"/>
+                <div class="product-info">Bu ürün, etiketler ve armalarla ilgili aksesuarları içerir.</div>
             </div>
     
             <!-- Ürün 4 -->
             <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
                 <div class="md:text-2xl z-10 absolute top-[6vw] left-[8vw] text-white font-semibold">Oto Kılıflar</div>
                 <img class="md:w-[30vw] w-full md:h-[30vh] h-[20vh] blur-[1px]" src="./static/otokılıflar-products.jpg" alt="not found"/>
+                <div class="product-info">Bu ürün, oto kılıflarıyla ilgili aksesuarları içerir.</div>
             </div>
 
             <!-- Ürün 5 -->
             <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
                 <div class="md:text-2xl z-10 absolute top-[6vw] left-[7vw] text-white font-semibold">Ayna Grupları</div>
                 <img class="md:w-[30vw] w-full md:h-[30vh] h-[20vh] blur-[1px]" src="./static/ayna-products.jpg" alt="not found"/>
+                <div class="product-info">Bu ürün, ayna gruplarıyla ilgili aksesuarları içerir.</div>
             </div>
-    
+
             <!-- Ürün 6 -->
             <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
                 <div class="md:text-2xl z-10 absolute top-[6vw] left-[8vw] text-white font-semibold">İç Aksesuar</div>
                 <img class="md:w-[30vw] w-full md:h-[30vh] h-[20vh] blur-[1px]" src="./static/içaksesuar-products.jpeg" alt="not found"/>
+                <div class="product-info">Bu ürün, iç aksesuarlarla ilgili aksesuarları içerir.</div>
             </div>
-    
+
             <!-- Ürün 7 -->
             <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
                 <div class="md:text-2xl z-10 absolute top-[6vw] left-[6vw] text-white font-semibold">Fosforlu Tozluk</div>
                 <img class="md:w-[30vw] w-full md:h-[30vh] h-[20vh] blur-[1px]" src="./static/fosoforlutozluk-products.jpg" alt="not found"/>
+                <div class="product-info">Bu ürün, fosforlu tozluklarla ilgili aksesuarları içerir.</div>
             </div>
-    
+
             <!-- Ürün 8 -->
             <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
                 <div class="md:text-2xl z-10 absolute top-[6vw] left-[3vw] text-white font-semibold">Otobüs / Minibüs Koltuk Başlıkları</div>
                 <img class="md:w-[30vw] w-full md:h-[30vh] h-[20vh] blur-[1px]" src="./static/koltukbaşlıkları-products.jpg" alt="not found"/>
+                <div class="product-info">Bu ürün, otobüs ve minibüs koltuk başlıklarıyla ilgili aksesuarları içerir.</div>
             </div>
 
             <!-- Ürün 9 -->
             <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
                 <div class="md:text-2xl z-10 absolute top-[6vw] left-[6vw] text-white font-semibold">Maun Kaplama</div>
                 <img class="md:w-[30vw] w-full md:h-[30vh] h-[20vh] blur-[1px]" src="./static/maunkaplama-products.jpg" alt="not found"/>
+                <div class="product-info">Bu ürün, maun kaplamalarla ilgili aksesuarları içerir.</div>
             </div>
-    
+
             <!-- Ürün 10 -->
             <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
                 <div class="md:text-2xl z-10 absolute top-[6vw] left-[7vw] text-white font-semibold">Cam Rüzgarlıkları</div>
                 <img class="md:w-[30vw] w-full md:h-[30vh] h-[20vh] blur-[1px]" src="./static/camrüzgarlıkları-products.jpg" alt="not found"/>
+                <div class="product-info">Bu ürün, cam rüzgarlıklarıyla ilgili aksesuarları içerir.</div>
             </div>
-    
+
             <!-- Ürün 11 -->
             <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
                 <div class="md:text-2xl z-10 absolute top-[6vw] left-[5vw] text-white font-semibold">Otobüs / Minibüs Perdeleri</div>
                 <img class="md:w-[30vw] w-full md:h-[30vh] h-[20vh] blur-[1px]" src="./static/perdeler-products.jpg" alt="not found"/>
+                <div class="product-info">Bu ürün, otobüs ve minibüs perdeleriyle ilgili aksesuarları içerir.</div>
             </div>
-    
+
             <!-- Ürün 12 -->
             <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
                 <div class="md:text-2xl z-10 absolute top-[6vw] left-[6vw] text-white font-semibold">Krom Aksesuarlar</div>
                 <img class="md:w-[30vw] w-full md:h-[30vh] h-[20vh] blur-[1px]" src="./static/krom-products.jpg" alt="not found"/>
+                <div class="product-info">Bu ürün, krom aksesuarlarla ilgili aksesuarları içerir.</div>
             </div>
 
             <!-- Ürün 13 -->
             <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
                 <div class="md:text-2xl z-10 absolute top-[6vw] left-[7vw] text-white font-semibold">Paspas</div>
                 <img class="md:w-[30vw] w-full md:h-[30vh] h-[20vh] blur-[1px]" src="./static/paspas-products.jpg" alt="not found"/>
+                <div class="product-info">Bu ürün, paspaslarla ilgili aksesuarları içerir.</div>
             </div>
-    
+
             <!-- Ürün 14 -->
             <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
                 <div class="md:text-2xl z-10 absolute top-[6vw] left-[7vw] text-white font-semibold">Cam Filmleri</div>
                 <img class="md:w-[30vw] w-full md:h-[30vh] h-[20vh] blur-[1px]" src="./static/camfilmlerimiz-products.jpeg" alt="not found"/>
+                <div class="product-info">Bu ürün, cam filmleriyle ilgili aksesuarları içerir.</div>
             </div>
-    
+
             <!-- Ürün 15 -->
             <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
                 <div class="md:text-2xl z-10 absolute top-[6vw] left-[7vw] text-white font-semibold">Koltuk Kılıfları</div>
                 <img class="md:w-[30vw] w-full md:h-[30vh] h-[20vh] blur-[1px]" src="./static/koltukkılıfları-products.jpg" alt="not found"/>
+                <div class="product-info">Bu ürün, koltuk kılıflarıyla ilgili aksesuarları içerir.</div>
             </div>
-    
+
             <!-- Ürün 16 -->
             <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
                 <div class="md:text-2xl z-10 absolute top-[5vw] left-[7vw] text-white font-semibold">Jant Kapakları</div>
                 <img class="md:w-[30vw] w-full md:h-[30vh] h-[20vh] blur-[1px]" src="./static/jantkapakları-products.jpg" alt="not found"/>
+                <div class="product-info">Bu ürün, jant kapaklarıyla ilgili aksesuarları içerir.</div>
             </div>
     
         </div>
     </div>
 
     <!-- Brands Part -->
-    <div class="bg-gray-50 py-[5vh] flex flex-col">
-        <div class="mx-auto text-2xl font-bold text-gray-800 mb-[1vh]">Markalar</div>
-        <hr class="w-[10vw] mx-auto border-2 border-gray-800 mb-[5vh]" />
-    
-        <div class="flex flex-col gap-y-[5vh]">
-            <div class="slideshow-container">
-                <div class="mySlides fade">
-                    <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
-                        <img class="md:w-[30vw] w-[30vw] md:h-[30vh] h-[20vh] mx-auto rounded-full" src="./static/carpi-markalar.png" alt="not found"/>
+    <div>
+        <div class="bg-gray-50 py-[5vh] flex flex-col">
+            <div class="mx-auto text-2xl font-bold text-gray-800 mb-[1vh]">Markalar</div>
+            <hr class="w-[10vw] mx-auto border-2 border-gray-800 mb-[5vh]" />
+        
+            <div class="flex flex-col gap-y-[5vh]">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
+                            <img class="md:w-[30vw] w-[30vw] md:h-[30vh] h-[20vh] mx-auto rounded-full" src="./static/carpi-markalar.png" alt="not found"/>
+                        </div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
+                            <img class="md:w-[30vw] w-[30vw] md:h-[30vh] h-[20vh] mx-auto rounded-full" src="./static/panda-markalar.jpg" alt="not found"/>
+                        </div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
+                            <img class="md:w-[30vw] w-[30vw] md:h-[30vh] h-[20vh] mx-auto rounded-full" src="./static/nıken-markalar.png" alt="not found"/>
+                        </div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
+                            <img class="md:w-[30vw] w-[30vw] md:h-[30vh] h-[20vh] mx-auto rounded-full" src="./static/omsalıne-markalar.png" alt="not found"/>
+                        </div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
+                            <img class="md:w-[30vw] w-[30vw] md:h-[30vh] h-[20vh] mx-auto rounded-full" src="./static/dizaynmls-markalar.png" alt="not found"/>
+                        </div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
+                            <img class="md:w-[30vw] w-[30vw] md:h-[30vh] h-[20vh] mx-auto rounded-full" src="./static/naviin-markalar.png" alt="not found"/>
+                        </div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
+                            <img class="md:w-[30vw] w-[30vw] md:h-[30vh] h-[20vh] mx-auto rounded-full" src="./static/bossautodeluxe-markalar.jpg" alt="not found"/>
+                        </div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
+                            <img class="md:w-[30vw] w-[30vw] md:h-[30vh] h-[20vh] mx-auto rounded-full" src="./static/carub-markalar.jpg" alt="not found"/>
+                        </div>
                     </div>
                 </div>
-                <div class="mySlides fade">
-                    <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
-                        <img class="md:w-[30vw] w-[30vw] md:h-[30vh] h-[20vh] mx-auto rounded-full" src="./static/panda-markalar.jpg" alt="not found"/>
-                    </div>
+        
+                <div style="text-align:center">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
                 </div>
-                <div class="mySlides fade">
-                    <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
-                        <img class="md:w-[30vw] w-[30vw] md:h-[30vh] h-[20vh] mx-auto rounded-full" src="./static/nıken-markalar.png" alt="not found"/>
-                    </div>
-                </div>
-                <div class="mySlides fade">
-                    <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
-                        <img class="md:w-[30vw] w-[30vw] md:h-[30vh] h-[20vh] mx-auto rounded-full" src="./static/omsalıne-markalar.png" alt="not found"/>
-                    </div>
-                </div>
-                <div class="mySlides fade">
-                    <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
-                        <img class="md:w-[30vw] w-[30vw] md:h-[30vh] h-[20vh] mx-auto rounded-full" src="./static/dizaynmls-markalar.png" alt="not found"/>
-                    </div>
-                </div>
-                <div class="mySlides fade">
-                    <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
-                        <img class="md:w-[30vw] w-[30vw] md:h-[30vh] h-[20vh] mx-auto rounded-full" src="./static/naviin-markalar.png" alt="not found"/>
-                    </div>
-                </div>
-                <div class="mySlides fade">
-                    <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
-                        <img class="md:w-[30vw] w-[30vw] md:h-[30vh] h-[20vh] mx-auto rounded-full" src="./static/bossautodeluxe-markalar.jpg" alt="not found"/>
-                    </div>
-                </div>
-                <div class="mySlides fade">
-                    <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
-                        <img class="md:w-[30vw] w-[30vw] md:h-[30vh] h-[20vh] mx-auto rounded-full" src="./static/carub-markalar.jpg" alt="not found"/>
-                    </div>
-                </div>
-            </div>
-    
-            <div style="text-align:center">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
             </div>
         </div>
+        
+        <script>
+            let slideIndex = 0;
+            showSlides();
+        
+            function showSlides() {
+                let i;
+                const slides = document.querySelectorAll('.mySlides');
+                const dots = document.querySelectorAll('.dot');
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = 'none';
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) { slideIndex = 1 }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(' active', '');
+                }
+                slides[slideIndex - 1].style.display = 'block';
+                dots[slideIndex - 1].className += ' active';
+                setTimeout(showSlides, 2000); // Her 2 saniyede bir slayt değiştir
+            }
+        </script>
     </div>
-    
-    <script>
-        let slideIndex = 0;
-        showSlides();
-    
-        function showSlides() {
-            let i;
-            const slides = document.querySelectorAll('.mySlides');
-            const dots = document.querySelectorAll('.dot');
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = 'none';
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1 }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(' active', '');
-            }
-            slides[slideIndex - 1].style.display = 'block';
-            dots[slideIndex - 1].className += ' active';
-            setTimeout(showSlides, 2000); // Her 2 saniyede bir slayt değiştir
-        }
-    </script>
-    
-    
 
     <!-- Footer Part -->
     <div>

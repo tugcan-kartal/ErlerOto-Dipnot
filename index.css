@@ -1,7 +1,26 @@
+/* Bunlar herosectiondaki slaytın sınıfları */
 .slide {
     transition: transform 0.5s ease-in-out;
 }
 
 .slide2 {
     transition: transform 0.5s ease-in-out;
+}
+
+/* Bunlar products ürünlerinin sınıfları */
+.product-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    font-size: 1.5rem;
+    display: none;
+    border-radius: 5px;
+}
+
+.relative:hover .product-info {
+    display: block;
 }
