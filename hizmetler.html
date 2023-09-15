@@ -7,16 +7,35 @@
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* CSS stilleri burada */
+        .product-info {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: black;
+            color: white;
+            font-size: 1.3rem;
+            display: none;
+            border-radius: 5px;
+        }
+
+        .relative:hover .product-info {
+            display: block;
+            z-index: 10;
+        }
+    </style>
 </head>
 
 <body class="overflow-x-hidden">
 
     <!-- Topnavbar Part -->
     <div class="bg-gray-800 py-[2vh] text-white">
-        <div class="flex justify-between mx-[2vw]">
+        <div class="flex justify-end mx-[2vw] gap-x-[2vw]">
             <div class="flex gap-x-[0.5vw]">
                 <div id="mailontopnav" class="mdi mdi-email"></div>
-                <div class="font-light"><a href="mailto:info@erleroto.com">info@erleroto.com</a></div>
+                <div class="font-semibold"><a href="mailto:info@erleroto.com">info@erleroto.com</a></div>
             </div>
 
             <div class="flex gap-x-[0.5vw]">
@@ -53,24 +72,25 @@
     </div>
 
     <!-- Products Part -->
-    <div class="bg-gray-50 py-[5vh] flex flex-col">
-
-        <div class="mx-auto text-2xl font-bold text-gray-800 mb-[1vh]">Hizmetler</div>
+    <div class="bg-gray-50 py-[5vh] mx-[2vw]">
+        <div class="mx-auto text-center text-2xl font-bold text-gray-800 mb-[1vh]">Ürünler</div>
         <hr class="w-[10vw] mx-auto border-2 border-gray-800 mb-[5vh]" />
-
-        <div class="flex flex-col gap-y-[5vh]">
-
-            <div class="flex justify-center gap-x-[2vw]">
-                <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
-                    <div class="md:text-2xl z-10 absolute top-[6vw] left-[8vw] text-white">Yedek Parça Satış</div>
-                    <img class="md:w-[30vw] w-[30vw] md:h-[30vh] h-[20vh]" src="./static/bagaj-products.jpg" alt="not found"/>
-                </div>
-                <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
-                    <div class="md:text-2xl z-10 absolute top-[6vw] left-[8vw] text-white">Yedek Parça Montaj</div>
-                    <img class="md:w-[30vw] w-[30vw] md:h-[30vh] h-[20vh]" src="./static/led-products.jpg" alt="not found"/>
-                </div>
+        <div class="flex justify-center gap-[2vw]">
+    
+            <!-- Ürün 1 -->
+            <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
+                <div class="md:text-2xl z-10 absolute top-[6vw] left-[9vw] text-white font-semibold">Yedek Parça Satış</div>
+                <img class="md:w-[30vw] w-full md:h-[35vh] h-[20vh] blur-[1px]" src="./static/bagaj-products.jpg" alt="not found"/>
+                <div class="product-info z-10">Yedek parça ve yedek parça satış işlemleri</div>
             </div>
-        
+    
+            <!-- Ürün 2 -->
+            <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
+                <div class="md:text-2xl z-10 absolute top-[6vw] left-[7vw] text-white font-semibold">Yedek Parça Montaj</div>
+                <img class="md:w-[30vw] w-full md:h-[35vh] h-[20vh] blur-[1px]" src="./static/led-products.jpg" alt="not found"/>
+                <div class="product-info">Yedek parça montaj işlemleri</div>
+            </div>
+    
         </div>
     </div>
 
@@ -81,10 +101,14 @@
             <a href="index.html" class="my-auto">
                 <img class="h-[10vh]" src="static/logo.png" alt="logo"/>
             </a>
-            
-            <div class="flex flex-col gap-y-[2vh]">
 
-                <div class="flex md:gap-x-[2vw] gap-x-[10vw] md:justify-end justify-center">
+            <div class="flex md:gap-x-[2vw] gap-x-[10vw] md:justify-end justify-center">
+
+                <div>
+                    Bizi takip etmek için...
+                </div>
+
+                <div class="flex gap-x-[2vw]">
                     <a class="hover:opacity-75 hover:cursor-pointer hover:scale-90 duration-300">
                         <img class="md:w-[2vw] w-[10vw]" src="static/facebook-footer.png" alt="not found" />
                     </a>
@@ -95,6 +119,11 @@
                         <img class="md:w-[2vw] w-[10vw]" src="static/youtube-footer.png" alt="not found" />
                     </a>
                 </div>
+            </div>
+            
+            <div class="flex flex-col gap-y-[2vh]">
+
+                
 
                 <div class="flex md:flex-row flex-col md:justify-end justify-center gap-y-[2vh]">
 
@@ -116,7 +145,6 @@
                 <div class="flex justify-end gap-x-[2vw]">
                     <a href="kvkk.html" class="p-2 hover:cursor-pointer hover:opacity-75 hover:scale-90 duration-300">KVKK ve Aydınlatma Metni</a>
                     <a href="gizlilik-cerez.html" class="p-2 hover:cursor-pointer hover:opacity-75 hover:scale-90 duration-300">Gizlilik ve Çerez Politikası</a>
-                    <div class="p-2 hover:cursor-pointer hover:opacity-75 hover:scale-90 duration-300">Çerez Tercihleri</div>
                 </div>
             </div>
 
