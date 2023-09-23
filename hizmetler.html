@@ -14,11 +14,15 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: black;
-            color: white;
+            background-color: #fff; /* Beyaz arka plan */
+            color: #333; /* Siyah metin rengi */
             font-size: 1.3rem;
             display: none;
-            border-radius: 5px;
+            border-radius: 10px;
+            font-weight: 700;
+            box-shadow: 0 2px 4px rgba(5, 5, 5, 5); /* Hafif bir gölge */
+            text-align: center; /* Metin hizalama */
+            padding: 3%;
         }
 
         .relative:hover .product-info {
@@ -71,23 +75,23 @@
         </div>
     </div>
 
-    <!-- Products Part -->
+    <!-- Services Part -->
     <div class="bg-gray-50 py-[5vh] mx-[2vw]">
-        <div class="mx-auto text-center text-2xl font-bold text-gray-800 mb-[1vh]">Ürünler</div>
+        <div class="mx-auto text-center text-2xl font-bold text-gray-800 mb-[1vh]">Hizmetler</div>
         <hr class="w-[10vw] mx-auto border-2 border-gray-800 mb-[5vh]" />
         <div class="flex justify-center gap-[2vw]">
     
             <!-- Ürün 1 -->
             <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
                 <div class="md:text-2xl z-10 absolute top-[6vw] left-[9vw] text-white font-semibold">Yedek Parça Satış</div>
-                <img class="md:w-[30vw] w-full md:h-[35vh] h-[20vh]" src="./static/bagaj-products.jpg" alt="not found"/>
+                <img class="md:w-[30vw] w-full md:h-[35vh] h-[20vh] rounded-2xl object-cover" src="./static/bagaj-products.jpg" alt="not found"/>
                 <div class="product-info z-10">Yedek parça ve yedek parça satış işlemleri</div>
             </div>
     
             <!-- Ürün 2 -->
             <div class="relative hover:opacity-75 hover:scale-90 hover:cursor-pointer duration-300">
                 <div class="md:text-2xl z-10 absolute top-[6vw] left-[7vw] text-white font-semibold">Yedek Parça Montaj</div>
-                <img class="md:w-[30vw] w-full md:h-[35vh] h-[20vh]" src="./static/led-products.jpg" alt="not found"/>
+                <img class="md:w-[30vw] w-full md:h-[35vh] h-[20vh] rounded-2xl object-cover" src="./static/led-products.jpg" alt="not found"/>
                 <div class="product-info">Yedek parça montaj işlemleri</div>
             </div>
     
